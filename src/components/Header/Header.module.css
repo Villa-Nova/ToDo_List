@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  height: 20rem;
+
+  background-color: var(--gray-700);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_content {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.font_to {
+  color: var(--blue-100);
+  font-family: "Inter", sans-serif;
+  line-height: normal;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.font_do {
+  color: var(--purple-200);
+  font-family: "Inter", sans-serif;
+  line-height: normal;
+  font-size: 4rem;
+  font-weight: 900;
+}
