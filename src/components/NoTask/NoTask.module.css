@@ -1,0 +1,37 @@
+.align_itens {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  border-top: 1px solid var(--gray-400);
+  border-top-left-radius: .8rem;
+  border-top-right-radius: .8rem;
+}
+
+.svg {
+  margin-top: 6.4rem;
+}
+
+.font_style {
+  color: var(--gray-300);
+  text-align: center;
+
+  margin-top: 1.6rem;
+}
+
+.font_style_primary {
+  font-family: var(--ff-inter);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.font_style_secundary {
+  font-family: var(--ff-inter);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
