@@ -1,6 +1,8 @@
 import styles from "./App.module.css"
 import { Header } from "./components/Header"
+import { NoTask } from "./components/NoTask"
 import { Search } from "./components/Search"
+import { TaskCounter } from "./components/TaskCounter"
 
 export function App() {
 
@@ -8,9 +10,11 @@ export function App() {
     <>
       <Header />
 
-      <form className={styles.center}>
+      <main className={styles.center}>
         <Search />
-      </form>
+        <TaskCounter />
+        <NoTask/>
+      </main>
     </>
   )
 }
