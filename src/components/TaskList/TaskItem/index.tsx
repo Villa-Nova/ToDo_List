@@ -1,7 +1,11 @@
 import styled from "./TaskItem.module.css"
 import svg from "../../../assets/trash.svg"
 
-export function TaskItem() {
+export interface ItemProps {
+  task: string,
+}
+
+export function TaskItem({ task }:ItemProps) {
   return (
     <li className={styled.li_item}>
       <div className={styled.li_content}>
@@ -14,7 +18,9 @@ export function TaskItem() {
         </header>
 
         <div className={styled.li_text_content}>
-          <p className={styled.li_text}>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+          <p className={styled.li_text}>
+            {task}
+          </p>
         </div>
 
         <footer>

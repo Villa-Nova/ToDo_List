@@ -54,6 +54,7 @@
 
 :has(input[type="checkbox"]:checked) .li_text {
   text-decoration: line-through;
+  color: var(--gray-300);
 }
 
 .li_text_content {
