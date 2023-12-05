@@ -4,16 +4,16 @@ import { ItemProps } from "./TaskItem"
 
 const ARR:ItemProps[] = [
   {
-    task: "Fazer café",
+    task: "A",
   },
   {
-    task: "treinar",
+    task: "B",
   },
   {
-    task: "Trampar",
+    task: "C",
   },
   {
-    task: "Estudar",
+    task: "D",
   },
 ]
 
