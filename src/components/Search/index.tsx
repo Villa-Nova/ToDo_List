@@ -15,7 +15,18 @@ export function Search({ handleSubmit }: SearchProps) {
 
   function handleFormSubmit(event: FormEvent) {
     event.preventDefault();
-    handleSubmit(search);
+
+    search? 
+    handleSubmit(search): 
+    alert("Create a task");
+
+    setSearch("");
+  }
+
+  function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
+    if (event.key === "Enter") {
+      handleFormSubmit(event as React.FormEvent);
+    } 
   }
 
   return (
@@ -32,7 +43,9 @@ export function Search({ handleSubmit }: SearchProps) {
           id="srcInput" 
           placeholder="Add a new task" 
           className={styled.input}
+          value={search}
           onChange={handleSearch}
+          onKeyDown={handleKeyDown}
         />
       </div>
 
