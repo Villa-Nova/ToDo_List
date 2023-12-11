@@ -1,6 +1,7 @@
+import { ChangeEvent, FormEvent, useState } from "react"
+
 import styled from "./search.module.css"
 import svg from "../../assets/buttonHeaderSvg.svg"
-import { ChangeEvent, FormEvent, useState } from "react"
 
 interface SearchProps {
   handleSubmit: (value: string) => void;
