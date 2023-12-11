@@ -1,35 +1,25 @@
 import styled from "./TaskList.module.css"
+
 import { TaskItem } from "./TaskItem"
-import { ItemProps } from "./TaskItem"
+import { uuidv4 } from "../../utils/uuidGenerator";
 
-const ARR:ItemProps[] = [
-  {
-    task: "A",
-  },
-  {
-    task: "B",
-  },
-  {
-    task: "C",
-  },
-  {
-    task: "D",
-  },
-]
+export interface TaskListProps {
+  searchValueArray: string[];
+  onDelete: (taskToDelete: string) => void;
+}
 
-export function TaskList() {
+export function TaskList({ searchValueArray, onDelete }: TaskListProps) {
+  const taskItems = searchValueArray.map(task => {
+    return(
+      <TaskItem
+        key={uuidv4()}
+        task={task}
+        onDelete={onDelete}
+      />
+    )
+  });
+
   return (
-    <ul className={styled.list} >
-      {
-        ARR.map(arr => {
-          return(
-            <TaskItem
-              key={arr.task}
-              task={arr.task}
-            />
-          )
-        })
-      }
-    </ul>
+    <ul className={styled.list} >{taskItems}</ul>
   )
 }
