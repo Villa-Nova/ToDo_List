@@ -41,7 +41,8 @@ export function App() {
           handleSubmit={handleSearchSubmit} 
         />
         <TaskCounter 
-          searchValueArray={searchValueArray} 
+          searchValueArray={
+            searchValueArray} 
         />
         
         {
@@ -49,8 +50,13 @@ export function App() {
             <NoTask /> 
           ) : (
             <TaskList 
-              searchValueArray={searchValueArray}
-              onDelete={handleDelete}
+              searchValueArray={
+                searchValueArray
+              }
+              
+              onDelete={
+                handleDelete
+              }
             />
           )
         }
