@@ -3,9 +3,10 @@ import svg from "../../../assets/trash.svg"
 
 export interface ItemProps {
   task: string,
+  onDelete: (taskToDelete: string) => void
 }
 
-export function TaskItem({ task }:ItemProps) {
+export function TaskItem({ task, onDelete }:ItemProps) {
   return (
     <li className={styled.li_item}>
       <div className={styled.li_content}>
@@ -24,7 +25,10 @@ export function TaskItem({ task }:ItemProps) {
         </div>
 
         <footer>
-          <button className={styled.li_button_img} >
+          <button 
+            className={styled.li_button_img} 
+            onClick={() => onDelete(task)}
+          >
             <img src={svg} alt="" className={styled.li_img} />
           </button>
         </footer>
