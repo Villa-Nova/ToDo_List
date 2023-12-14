@@ -5,7 +5,6 @@ import svg from "../../assets/buttonHeaderSvg.svg"
 
 interface SearchProps {
   handleSubmit: (value: string) => void;
-  autocomplete: boolean;
 }
 
 export function Search({ handleSubmit }: SearchProps) {
