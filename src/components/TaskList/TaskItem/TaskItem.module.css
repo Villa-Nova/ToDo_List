@@ -52,11 +52,6 @@
   background-size: 70%;
 }
 
-:has(input[type="checkbox"]:checked) .li_text {
-  text-decoration: line-through;
-  color: var(--gray-300);
-}
-
 .li_text_content {
   width: 63.2rem;
 }
@@ -70,6 +65,19 @@
   line-height: 140%;
 
   padding-right: 4rem;
+}
+
+.li_text_checked {
+  font-family: var(--ff-inter);
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+
+  padding-right: 4rem;
+
+  text-decoration: line-through;
+  color: var(--gray-300);
 }
 
 .li_button_img {

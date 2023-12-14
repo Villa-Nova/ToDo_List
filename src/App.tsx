@@ -32,6 +32,8 @@ export function App() {
     updateLocalStorage(newTasks);
   };
 
+  const completedTask = () => {};
+
   return (
     <>
       <Header />
@@ -50,6 +52,7 @@ export function App() {
           ) : (
             <TaskList 
               searchValueArray={searchValueArray}
+              onChangeCheckBox={completedTask}
               onDelete={handleDelete}
             />
           )
