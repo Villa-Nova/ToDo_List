@@ -5,7 +5,6 @@ import styles from "./App.module.css"
 import { Header } from "./components/Header"
 import { Search } from "./components/Search"
 import { TaskList } from "./components/TaskList"
-import { TaskCounter } from "./components/TaskCounter"
 import { NoTask } from "./components/NoTask"
 
 export function App() {
@@ -41,9 +40,6 @@ export function App() {
       <main className={styles.center}>
         <Search 
           handleSubmit={handleSearchSubmit} 
-        />
-        <TaskCounter 
-          searchValueArray={searchValueArray} 
         />
         
         {
