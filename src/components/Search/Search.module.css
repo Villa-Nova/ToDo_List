@@ -16,6 +16,8 @@
   display: flex;
   align-items: center;
   gap: .8rem;
+
+  margin-bottom: 4.2rem;
 }
 
 .inputWrapper {
